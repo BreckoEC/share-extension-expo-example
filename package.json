@@ -1,11 +1,19 @@
 {
   "name": "share-extension-expo-example",
   "version": "1.0.0",
+  "description": "Share Extension Expo Example",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
     "ios": "expo start --ios"
   },
+  "repository": "https://github.com/BreckoEC/share-extension-expo-example.git",
+  "bugs": {
+    "url": "https://github.com/BreckoEC/share-extension-expo-example/issues"
+  },
+  "author": "Brecko <cunin.etienne@gmail.com> (https://github.com/BreckoEC)",
+  "license": "MIT",
+  "homepage": "https://github.com/BreckoEC/share-extension-expo-example#readme",
   "dependencies": {
     "expo": "~48.0.5",
     "expo-status-bar": "~1.4.4",
@@ -13,7 +21,15 @@
     "react-native": "0.71.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0"
+    "@babel/core": "^7.20.0",
+    "@typescript-eslint/eslint-plugin": "^5.48.0",
+    "@typescript-eslint/parser": "^5.48.0",
+    "eslint": "^8.31.0",
+    "eslint-config-universe": "^11.1.1",
+    "prettier": "^2.8.1",
+    "prettier-eslint": "^15.0.1",
+    "prettier-eslint-cli": "^7.1.0",
+    "typescript": "^4.7.4"
   },
   "private": true
 }
