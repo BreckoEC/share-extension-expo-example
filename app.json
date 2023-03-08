@@ -24,9 +24,9 @@
         "expo-build-properties",
         {
           "ios": {
-            "deploymentTarget": "15.0",
-          },
-        },
+            "deploymentTarget": "15.0"
+          }
+        }
       ],
       [
         "share-extension-expo-plugin",

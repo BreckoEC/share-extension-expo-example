@@ -3,58 +3,18 @@ import SwiftUI
 import AVFoundation
 
 /**
- This class is used to share data with the main app
- */
-struct Keychain {
-  var api: String
-
-  init() throws {
-    guard let group = (Bundle.main.object(forInfoDictionaryKey: "ShareExtensionKeychainAccessGroup") as? String),
-          let api = Keychain.getValue(forKey: "api", inGroup: group)
-    else {
-      throw CustomError.generic("Failed to find 'api' or 'userId' from the keychain")
-    }
-
-    self.api = api.trimmingCharacters(in: ["/"])
-  }
-
-  private static func getValue(forKey key: String, inGroup group: String) -> String? {
-    let query: [String: Any] = [
-      kSecClass as String: kSecClassGenericPassword,
-      kSecAttrAccount as String: key,
-      kSecAttrAccessGroup as String: group,
-      kSecReturnData as String: true,
-      kSecReturnAttributes as String: true,
-      kSecMatchLimit as String: kSecMatchLimitOne,
-    ]
-
-    var item: CFTypeRef?
-    let status = SecItemCopyMatching(query as CFDictionary, &item)
-
-    guard status == errSecSuccess,
-          let existingItem = item as? [String : AnyObject],
-          let itemData = existingItem[kSecValueData as String] as? Data,
-          let result = String(data: itemData, encoding: .utf8)
-    else {
-      return nil
-    }
-
-    return result
-  }
-}
-
-/**
  Helper to handle api calls
  */
 struct ApiClient {
   private var api: URL
 
   init() throws {
-    let keychain = try Keychain()
-    guard let api = URL(string: keychain.api) else {
-      throw CustomError.generic("Failed to create an url from given api host")
+    guard let api = KeychainHelper.getValue(forKey: "api"),
+          let apiURL = URL(string: api)
+    else {
+      throw CustomError.generic("Failed to get api from keychain or it is not a URL")
     }
-    self.api = api
+    self.api = apiURL
   }
 
   func getUsers() async throws -> [User] {
@@ -125,24 +85,29 @@ struct UserView: View {
       .clipShape(Circle())
 
       VStack {
-        Text(user.name)
-          .lineLimit(1)
-          .padding(.top, 8)
+        HStack {
+          Text(user.name)
+            .lineLimit(1)
+            .padding(.top, 8)
 
-        Text("@\(user.username)")
-          .lineLimit(1)
-          .font(.footnote)
-          .padding(.leading, -8.0)
-          .foregroundColor(.gray)
+          Spacer()
+        }
+
+        HStack {
+          Text("@\(user.username)")
+            .lineLimit(1)
+            .font(.footnote)
+            .foregroundColor(.gray)
+
+          Spacer()
+        }
       }
 
       Spacer()
 
-      HStack {
-        Text(user.phone)
-          .lineLimit(1)
-          .foregroundColor(.gray)
-      }
+      Text(user.phone)
+        .lineLimit(1)
+        .foregroundColor(.gray)
     }
   }
 }

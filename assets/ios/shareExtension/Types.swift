@@ -13,6 +13,13 @@ struct User: Identifiable, Codable {
   // The API used does not provide user thumbnail :(
   var picture = "https://www.gravatar.com/avatar/6ed6da5f61da2e30d23693bf7c612bd4"
 
+  enum CodingKeys: String, CodingKey {
+    case id = "id"
+    case name = "name"
+    case username = "username"
+    case phone = "phone"
+  }
+
   static let sample = samples.first!
   static let samples = (0..<5).map {
     User(id: $0, name: "User #\($0)", username: "user-\($0)", phone: "000000000\($0)")
