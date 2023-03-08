@@ -7,19 +7,15 @@ import AVFoundation
  */
 struct Keychain {
   var api: String
-  var userId: Int
 
   init() throws {
     guard let group = (Bundle.main.object(forInfoDictionaryKey: "ShareExtensionKeychainAccessGroup") as? String),
-          let api = Keychain.getValue(forKey: "api", inGroup: group),
-          let userIdString = Keychain.getValue(forKey: "userId", inGroup: group),
-          let userId = Int(userIdString)
+          let api = Keychain.getValue(forKey: "api", inGroup: group)
     else {
       throw CustomError.generic("Failed to find 'api' or 'userId' from the keychain")
     }
 
     self.api = api.trimmingCharacters(in: ["/"])
-    self.userId = userId
   }
 
   private static func getValue(forKey key: String, inGroup group: String) -> String? {

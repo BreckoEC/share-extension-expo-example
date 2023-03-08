@@ -29,6 +29,7 @@
 ## 🙏 Patrons
 
 Special thanks to the company that made this possible: [uKu](https://github.com/ukuteam)
+Also a big thank to [typicode](https://github.com/typicode/jsonplaceholder) for their amazing tool
 
 ## 📝 License
 
