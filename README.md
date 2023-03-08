@@ -1,8 +1,6 @@
 <h1 align="center">Welcome to share-extension-expo-example 👋</h1>
 
 <p align="center">
-  <img src="https://img.shields.io/github/package-json/v/BreckoEC/share-extension-expo-example?label=Version&logo=github" />
-  <img src="https://img.shields.io/github/release-date/BreckoEC/share-extension-expo-example?label=Released&logo=github" />
   <img src="https://img.shields.io/github/license/BreckoEC/share-extension-expo-example?label=Licence&logo=github" />
   <img src="https://img.shields.io/github/issues/BreckoEC/share-extension-expo-example?label=Issues&logo=github" />
   <img src="https://img.shields.io/github/issues-pr/BreckoEC/share-extension-expo-example?label=Pull%20Requests&logo=github" />
