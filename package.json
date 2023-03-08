@@ -2,10 +2,10 @@
   "name": "share-extension-expo-example",
   "version": "1.0.0",
   "description": "Share Extension Expo Example",
-  "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "start": "expo start",
-    "ios": "expo start --ios"
+    "start": "expo start --dev-client",
+    "ios": "expo run:ios",
+    "android": "expo run:android"
   },
   "repository": "https://github.com/BreckoEC/share-extension-expo-example.git",
   "bugs": {
@@ -19,6 +19,8 @@
     "expo-status-bar": "~1.4.4",
     "react": "18.2.0",
     "react-native": "0.71.3",
+    "expo-splash-screen": "~0.18.1",
+    "expo-build-properties": "~0.5.1",
     "share-extension-expo-plugin": "^1.0.1"
   },
   "devDependencies": {

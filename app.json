@@ -21,6 +21,14 @@
     },
     "plugins": [
       [
+        "expo-build-properties",
+        {
+          "ios": {
+            "deploymentTarget": "15.0",
+          },
+        },
+      ],
+      [
         "share-extension-expo-plugin",
         {
           "devTeam": "XXXXXXXXXX",

@@ -1,12 +1,12 @@
 import { StatusBar } from 'expo-status-bar'
 import { useEffect } from 'react'
 import { StyleSheet, Text, View } from 'react-native'
-import { setKeychainValue } from 'share-extension-expo-plugin'
+import * as shareExtensionNativeModule from 'share-extension-expo-plugin'
 
 export default function App() {
   useEffect(() => {
-    setKeychainValue('api', 'https://jsonplaceholder.typicode.com')
-  }, [setKeychainValue])
+    shareExtensionNativeModule.setKeychainValue('api', 'https://jsonplaceholder.typicode.com')
+  }, [])
 
   return (
     <View style={styles.container}>
