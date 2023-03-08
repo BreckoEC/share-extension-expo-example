@@ -15,7 +15,20 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
-    }
+      "supportsTablet": true,
+      "bundleIdentifier": "com.example.share-extension-expo-example",
+      "buildNumber": "1"
+    },
+    "plugins": [
+      [
+        "share-extension-expo-plugin",
+        {
+          "devTeam": "XXXXXXXXXX",
+          "extensionPath": "assets/ios/shareExtension",
+          "mainStoryboardName": "ShareView",
+          "activationRule": ["text", "image", "url"]
+        }
+      ]
+    ]
   }
 }
