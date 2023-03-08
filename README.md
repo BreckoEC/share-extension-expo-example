@@ -30,8 +30,8 @@
 
 - Clone this project
 - Open `app.json`
-- Replace `"bundleIdentifier": "com.example.share-extension-expo-example"` by your bundle identifier
-- Replace `"devTeam": "XXXXXXXXXX"` by your iOS dev team
+- Replace `com.example.share-extension-expo-example` by your `bundleIdentifier`
+- Replace `XXXXXXXXXX` by your iOS `devTeam`
 - Run the expo app and open it once (to setup the `api` entry into the keychain)
 - Try to share a text, a screenshot, an image or a URL to see what happens !
 
