@@ -24,7 +24,16 @@
   </a>
 </p>
 
-> TODO
+> Here is an example for the [share-extension-expo-plugin](https://github.com/BreckoEC/share-extension-expo-plugin)
+
+## 👀 Try it out
+
+- Clone this project
+- Open `app.json`
+- Replace `"bundleIdentifier": "com.example.share-extension-expo-example"` by your bundle identifier
+- Replace `"devTeam": "XXXXXXXXXX"` by your iOS dev team
+- Run the expo app and open it once (to setup the `api` entry into the keychain)
+- Try to share a text, a screenshot, an image or a URL to see what happens !
 
 ## 🙏 Patrons
 
