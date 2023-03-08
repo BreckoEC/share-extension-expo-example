@@ -7131,6 +7131,13 @@ shallow-clone@^3.0.0:
   dependencies:
     kind-of "^6.0.2"
 
+share-extension-expo-plugin@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/share-extension-expo-plugin/-/share-extension-expo-plugin-1.0.0.tgz#3682c2c3f0dd5ffab94573343b82423195633e17"
+  integrity sha512-OQhbKkpZ5Kijw9YI9dd6qH7mYpk0CEo6dHHGRQUhX3GBakGReNgggmwNEQMCPTXkVvKcs3kcmRfbUW/oEVx6Wg==
+  dependencies:
+    xcode "^3.0.1"
+
 shebang-command@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/shebang-command/-/shebang-command-1.2.0.tgz#44aac65b695b03398968c39f363fee5deafdf1ea"
