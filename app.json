@@ -16,7 +16,7 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.example.share-extension-expo-example",
+      "bundleIdentifier": "wtf.uku.client.local",
       "buildNumber": "1"
     },
     "plugins": [
@@ -31,7 +31,7 @@
       [
         "share-extension-expo-plugin",
         {
-          "devTeam": "XXXXXXXXXX",
+          "devTeam": "X7H82CY5HL",
           "extensionPath": "assets/ios/shareExtension",
           "mainStoryboardName": "ShareView",
           "activationRule": ["text", "image", "url"]
